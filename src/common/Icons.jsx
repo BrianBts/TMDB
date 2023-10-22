@@ -318,7 +318,7 @@ export function SearchIcon({ className }) {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={2}
-      stroke="currentColor"
+      stroke="white"
       className={`w-6 h-6 ${className || ""}`}
     >
       <path
@@ -743,6 +743,18 @@ export function PencilAccesories() {
         stroke-linejoin="round"
         d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
       />
+    </svg>
+  );
+}
+
+export function Waves() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#E50914"
+        fill-opacity="1"
+        d="M0,32L120,74.7C240,117,480,203,720,218.7C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+      ></path>
     </svg>
   );
 }

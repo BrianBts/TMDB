@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function CardMovies({ title, imageUrl }) {
+const Card = ({ data }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <>
-      <div className="bg-white h-40 w-72 rounded-lg overflow-hidden">
-        <div
-          className="h-full w-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        >
-          <div className="p-4 flex flex-col justify-end h-full bg-gradient-to-t from-transparent to-black">
-            <p className="text-white text-xl font-semibold">{title}</p>
-          </div>
-        </div>
-      </div>
-    </>
+    <div
+      className={`relative overflow-hidden cursor-pointer transform transition-transform duration-200 mt-10 pl-3  ${
+        isHovered ? "scale-120" : "scale-110"
+      } m-2`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <img
+        src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
+        className="rounded-lg"
+        alt={data.original_title}
+      />
+    </div>
   );
-}
+};
+
+export default Card;

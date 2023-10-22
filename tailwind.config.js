@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         inter: ["var(--font-inter)"],
         montserrat: ["var(--font-montserrat)"],
+        bebasNeue: ["Bebas Neue", "sans-serif"],
       },
       fontSize: {
         sm: ["0.75rem", "1rem"],

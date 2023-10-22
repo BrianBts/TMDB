@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import logo from "../../public/logo.png";
+import logo from "../../public/TMDB.png";
 
 import {
   Input,
@@ -16,9 +16,9 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent">
+    <nav className="w-full h-14  bg-transparent absolute top-0 z-50  text-white">
       <div className="mx-auto flex items-center justify-between pb-3">
-        <Image src={logo} alt="LogoTMDB" className="w-56 pl-5 pt-5" />
+        <Image src={logo} alt="LogoTMDB" className="w-32 pl-5 pt-5" />
 
         <div className="flex items-center justify-center mr-5 mt-2 gap-6">
           <Input placeholder="Buscar Película" size="md" />
