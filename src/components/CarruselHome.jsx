@@ -7,7 +7,7 @@ import Navbars from "./Navbar2";
 function CarruselHome({ films }) {
   return (
     <>
-      <Navbars />
+      <Navbars films={films} />
       <div>
         <CommonCarrusel films={films} />
         <div className="z-10 absolute w-[1100px] h-[350px] flex flex-col items-center justify-center  top-[200px] left-[750px] ">
